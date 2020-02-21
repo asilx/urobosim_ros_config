@@ -1,0 +1,11 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find ur5_description)/urdf/ur5_robot.urdf.xacro"/>
+
+        <rosparam command="load" file="$(find urobosim_ros_config)/config/ros_control_sim_ur5.yaml" />
+
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="ur5_state_publisher" output="screen">\
+           /*<param name="robot_description" command="$(find xacro)/xacro.py $(find ur5_description)/urdf/ur5_robot.urdf.xacro"/>*/
+           <param name="publish_frequency" value="25"/>
+           <param name="ignore_timestamp" value="true"/>
+        </node>
+</launch>

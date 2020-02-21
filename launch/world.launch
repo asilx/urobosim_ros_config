@@ -10,6 +10,6 @@
   <include file="$(find urobosim_ros_config)/launch/environment.launch" />
 
   <!-- robot -->
-  <include file="$(find urobosim_ros_config)/launch/robot.launch" />
+  <include file="$(find urobosim_ros_config)/launch/ur5.launch" />
 
 </launch>
